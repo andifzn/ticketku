@@ -152,3 +152,7 @@ main {
 .hero-content a:hover {
     transform: scale(1.1);
 }
+
+.promo {
+    height: 100vh;
+}
