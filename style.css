@@ -98,7 +98,11 @@ header {
 
 main {
     position: relative;
-    transform: translateY(11%);
+    transform: translateY(9%);
+    -webkit-transform: translateY(9%);
+    -moz-transform: translateY(9%);
+    -ms-transform: translateY(9%);
+    -o-transform: translateY(9%);
 }
 
 .hero {
