@@ -1,0 +1,149 @@
+:root {
+    --background-color: #f5f5f5;
+    --paragraf-color: #666666;
+    --button-color: #ffd400;
+    --hover-color: #f4c300;
+    --button-text-color: #333;
+    --card-color: #ffffff;
+    --link-color: #004aad;
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5f5f5;
+    position: relative;
+}
+
+header {
+    font-family: "Poppins", sans-serif;
+    font-weight: 550;
+    background-color: var(--link-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.navbar {
+    padding: 10px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo img {
+    height: 40px;
+}
+
+.navbar-menu {
+    position: absolute;
+    transform: translateX(999%);
+    top: 95%;
+    transition: all 0.3s ease-in-out;
+    font-size: 14px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+    background-color: var(--link-color);
+    height: 100dvh;
+    width: 300px;
+    padding: 10px 20px;
+}
+
+.navbar-menu.navbar-menu-active {
+    top: 95%;
+    transform: translateX(20%);
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-menu a,
+.dropdown-content a {
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-menu a:hover,
+.dropdown-content a:hover {
+    color: var(--hover-color);
+}
+
+.dropdown-content {
+    display: none;
+}
+
+.dropdown-content.active {
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+    margin-top: 20px;
+}
+
+.hamburger-menu img {
+    height: 30px;
+}
+
+.contact-menu {
+    display: none;
+}
+
+main {
+    position: relative;
+    transform: translateY(11%);
+}
+
+.hero {
+    height: 91vh;
+    width: 100vw;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("assets/img/background.webp") center/cover no-repeat;
+    display: flex;
+}
+
+.hero-content {
+    font-family: "Poppins", sans-serif;
+    color: white;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px 0;
+}
+
+.hero-content h1 {
+    font-size: 1.75rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    font-weight: 450;
+}
+
+.hero-content a {
+    margin-top: 5px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    background-color: var(--button-color);
+    color: var(--button-text-color);
+    font-weight: 500;
+    display: block;
+    width: max-content;
+    padding: 6px 15px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.hero-content a:hover {
+    transform: scale(1.1);
+}
