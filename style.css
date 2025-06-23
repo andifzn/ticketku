@@ -19,6 +19,7 @@
 body {
     background-color: #f5f5f5;
     position: relative;
+    overflow-x: hidden;
 }
 
 header {
@@ -48,20 +49,24 @@ header {
     transform: translateX(999%);
     top: 95%;
     transition: all 0.3s ease-in-out;
-    font-size: 14px;
+    font-size: 0.875rem;
     position: absolute;
     display: flex;
     flex-direction: column;
     gap: 20px 0;
     background-color: var(--link-color);
     height: 100dvh;
-    width: 300px;
+    width: 3000px;
     padding: 10px 20px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
 }
 
 .navbar-menu.navbar-menu-active {
     top: 95%;
-    transform: translateX(20%);
+    transform: translateX(3%);
     transition: all 0.3s ease-in-out;
 }
 
@@ -70,6 +75,7 @@ header {
     text-decoration: none;
     color: white;
     transition: all 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .navbar-menu a:hover,
@@ -151,4 +157,151 @@ main {
 
 .promo {
     height: 100vh;
+}
+
+/* Ukuran Handphone Sedang */
+@media only screen and (min-width: 481px) and (max-width: 576px) {
+    .navbar-menu {
+        font-size: 0.9rem;
+    }
+
+    /* + 0.45 */
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    /* + 0.5 */
+    .hero-content p {
+        font-size: 1.35rem;
+    }
+}
+
+/* Ukuran Handphone Besar */
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+    .navbar-menu {
+        font-size: 0.9rem;
+    }
+
+    /* + 0.45 */
+    .hero-content h1 {
+        font-size: 2.65rem;
+        display: block;
+        width: 85%;
+    }
+
+    /* + 0.5 */
+    .hero-content p {
+        font-size: 1.40rem;
+        display: block;
+        width: 85%;
+    }
+}
+
+/* Ukuran Tablet */
+@media only screen and (min-width: 769px) and (max-width: 1023px) {
+    .navbar-menu {
+        font-size: 0.975rem;
+        transform: translateX(100%);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .navbar-menu.navbar-menu-active {
+        transform: translateX(10%);
+        transition: all 0.3s ease-in-out;
+    }
+
+    /* + 0.45 */
+    .hero-content h1 {
+        font-size: 3.05rem;
+        display: block;
+        width: 85%;
+    }
+
+    /* + 0.5 */
+    .hero-content p {
+        font-size: 1.45rem;
+        display: block;
+        width: 85%;
+    }
+
+}
+
+/* Ukuran Laptop */
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
+    /* Navbar Section */
+    .navbar-menu {
+        font-size: 1rem;
+        transform: translateX(0);
+        background-color: transparent;
+        height: auto;
+        flex-direction: row;
+        top: 0;
+        justify-content: center;
+        align-items: center;
+        position: unset;
+        gap: 0 30px;
+    }   
+
+    .dropdown-content.active {
+        position: absolute;
+        background-color: var(--link-color);
+        width: 130px;
+        padding: 0 0 10px 10px;
+        transform: translateX(-7%);
+        -webkit-transform: translateX(-7%);
+        -moz-transform: translateX(-7%);
+        -ms-transform: translateX(-7%);
+        -o-transform: translateX(-7%);
+    }
+
+    .contact-menu a {
+        display: block;
+        font-size: 1rem;
+        text-decoration: none;
+        background-color: var(--button-color);
+        color: var(--button-text-color);
+        width: max-content;
+        padding: 6px    ;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+    }
+
+    .contact-menu {
+        display: block;
+    }
+
+    #contact-menu {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: none;
+    }
+    
+    /* Hero Section */
+    .hero-content {
+        gap: 20px 0;
+    }
+
+    /* + 0.45 */
+    .hero-content h1 {
+        font-size: 3.5rem;
+        display: block;
+        width: 60%;
+    }
+
+    /* + 0.5 */
+    .hero-content p {
+        font-size: 1.50rem;
+        display: block;
+        width: 55%;
+    }
+
+    .hero-content a {
+        font-size: 1rem;
+        margin-top: 10px;
+    }
 }
