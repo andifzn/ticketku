@@ -98,13 +98,21 @@ header {
     height: 30px;
 }
 
-.contact-menu {
+.contact-menu , .contact-menu a {
     display: none;
 }
 
 main {
     position: relative;
     margin-top: 66px;
+}
+
+.hero {
+    padding: 0;
+}
+
+section {
+    padding: 40px 16px;
 }
 
 .hero {
@@ -138,25 +146,125 @@ main {
 }
 
 .hero-content a {
+    font-family: "Poppins", sans-serif;
     margin-top: 5px;
     text-decoration: none;
     font-size: 0.95rem;
     background-color: var(--button-color);
     color: var(--button-text-color);
-    font-weight: 500;
+    font-weight: 600;
     display: block;
     width: max-content;
-    padding: 6px 15px;
-    border-radius: 10px;
+    padding: 8px 15px;
+    border-radius: 15px;
     transition: all 0.3s ease-in-out;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
 }
 
 .hero-content a:hover {
     transform: scale(1.1);
 }
 
+.header-section {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px 0;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.header-section h1 {
+    font-size: 1.5rem;
+    color: var(--button-text-color);
+}
+
+.header-section h2 {
+    font-size: 1rem;
+    color: var(--paragraf-color);
+    font-weight: 450;
+}
+/* Promo Section */
 .promo {
     height: 100vh;
+}
+
+.promo-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+}
+
+.promo-card {
+    height: auto;
+    width: 100%;
+}
+
+.promo-card-image {
+    background-image: url('assets/img/hotel-vina.webp');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.promo-card-cta {
+    padding: 15px 8px;
+    border-radius: 0 0 10px 10px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--link-color);
+}
+
+.promo-start {
+    display: flex;
+    align-items: center;
+    gap: 0 50px;
+    background-color: var(--background-color);
+    padding: 7px;
+    border-radius: 10px;
+}
+
+.promo-time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.promo-date p {
+    font-size: 1.45rem;
+}
+
+.promo-month-days p:nth-child(1) {
+    font-size: 0.875rem;
+    font-weight: 550;
+}
+
+.promo-month-days p:nth-child(2) {
+    font-size: 0.55rem;
+}
+
+.promo-start img {
+    height: 18px;
+}
+
+.promo-card-cta-order a {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    font-size: 0.75rem;
+    background-color: var(--button-color);
+    color: var(--background-color);
+    padding: 8px 15px;
+    border-radius: 15px;
 }
 
 /* Ukuran Handphone Sedang */
@@ -191,7 +299,7 @@ main {
 
     /* + 0.5 */
     .hero-content p {
-        font-size: 1.40rem;
+        font-size: 1.4rem;
         display: block;
         width: 85%;
     }
@@ -223,7 +331,6 @@ main {
         display: block;
         width: 85%;
     }
-
 }
 
 /* Ukuran Laptop */
@@ -240,7 +347,11 @@ main {
         align-items: center;
         position: unset;
         gap: 0 30px;
-    }   
+    }
+
+    .navbar-logo img {
+        height: 50px;
+    }
 
     .dropdown-content.active {
         position: absolute;
@@ -254,6 +365,10 @@ main {
         -o-transform: translateX(-7%);
     }
 
+    .contact-menu {
+        display: block;
+    }
+
     .contact-menu a {
         display: block;
         font-size: 1rem;
@@ -261,16 +376,19 @@ main {
         background-color: var(--button-color);
         color: var(--button-text-color);
         width: max-content;
-        padding: 6px    ;
-        border-radius: 10px;
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        -ms-border-radius: 10px;
-        -o-border-radius: 10px;
-    }
+        padding: 8px 15px;
+        border-radius: 20px;
+        transition: all 0.2s ease-in-out;
+        font-weight: 550;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+}
 
-    .contact-menu {
-        display: block;
+    .contact-menu a:hover{
+        transform: scale(1.1);
+        transition: all 0.2s ease-in-out;
     }
 
     #contact-menu {
@@ -280,7 +398,7 @@ main {
     .hamburger-menu {
         display: none;
     }
-    
+
     /* Hero Section */
     .hero-content {
         gap: 20px 0;
@@ -291,11 +409,12 @@ main {
         font-size: 3.5rem;
         display: block;
         width: 60%;
+        line-height: 60px;
     }
 
     /* + 0.5 */
     .hero-content p {
-        font-size: 1.50rem;
+        font-size: 1.5rem;
         display: block;
         width: 55%;
     }
