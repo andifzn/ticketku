@@ -201,6 +201,7 @@ section {
     align-items: center;
     height: auto;
     font-family: "Inter";
+    gap: 35px 0;
 }
 
 .promo-card {
