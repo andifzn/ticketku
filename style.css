@@ -292,9 +292,20 @@ section {
     text-decoration: none;
     font-size: 0.75rem;
     background-color: var(--button-color);
-    color: var(--background-color);
+    color: var(--button-text-color);
     padding: 8px 15px;
     border-radius: 15px;
+    font-weight: 550;
+    transition: all 0.2s ease-in-out;
+}
+
+.promo-card-cta-order a:hover {
+    color: var(--card-color);
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
 }
 
 /* Ukuran Handphone Sedang */
