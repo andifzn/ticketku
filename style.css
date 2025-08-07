@@ -288,6 +288,7 @@ section {
 }
 
 .promo-card-cta-order a {
+    display: block;
     font-family: "Poppins", sans-serif;
     text-decoration: none;
     font-size: 0.75rem;
@@ -301,11 +302,8 @@ section {
 
 .promo-card-cta-order a:hover {
     color: var(--card-color);
+    transform: scale(1.1);
     transition: all 0.2s ease-in-out;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -ms-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
 }
 
 /* Ukuran Handphone Sedang */
